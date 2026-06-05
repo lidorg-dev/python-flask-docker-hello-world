@@ -8,6 +8,7 @@ on:
 jobs:
   build-push:
     runs-on: ubuntu-latest
+    environment: PROD
     steps:
       - name: checkout code
         uses: actions/checkout@v6.0.3
@@ -21,3 +22,5 @@ jobs:
         run: docker push lidorlg/python-flask
       - name: print variable course
         run: "echo the course variable is : ${{ vars.COURSE }}"
+      - name: print log level variable
+        run: "echo the log level is : ${{ vars.LOG_LEVEL }}"

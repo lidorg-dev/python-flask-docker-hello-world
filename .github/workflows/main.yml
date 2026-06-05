@@ -15,5 +15,8 @@ jobs:
         run: docker build -t lidorlg/python-flask .
       - name: list images
         run: docker images
+      - name: docker login
+        run: docker login -u ${{ secrets.DOCKERHUB_USER }} -p ${{ secrets.DOCKERHUB_TOKEN }}  
       - name: push Docker Hub
         run: docker push lidorlg/python-flask
+        

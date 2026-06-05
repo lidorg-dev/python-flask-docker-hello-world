@@ -20,5 +20,5 @@ jobs:
       - name: push Docker Hub
         run: docker push lidorlg/python-flask
       - name: print variable course
-        run : echo the course variable is : ${{ vars.COURSE }}
+        run: echo the course variable is : ${{ vars.COURSE }}
         

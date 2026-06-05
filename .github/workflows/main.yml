@@ -12,6 +12,8 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v6.0.3
       - name: build docker image
-        run: docker build -t python-flask .
+        run: docker build -t lidorlg/python-flask .
       - name: list images
         run: docker images
+      - name: push Docker Hub
+        run: docker push lidorlg/python-flask
